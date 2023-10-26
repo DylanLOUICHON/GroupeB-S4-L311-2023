@@ -1,6 +1,7 @@
 <?php
       // Inclure le fichier des fonctions php
-       Inclure_once('inc/inc.functions.php');
+       include_once('inc/inc.functions.php');
+     // Appel à une fonction pour récupérer le contenu des articles par l'identifiant
 	$article = getArticleById(
 		array_key_exists('id', $_GET) ? $_GET['id'] : null
 	);
