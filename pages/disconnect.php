@@ -1,5 +1,6 @@
 <?php
+      // appel à la fonction déconnexion
 	setDisconnectUser();
-
-	header('Location:indx.php');
+      // renvoi l'utilisateur à la page index
+	header('Location:index.php');
 ?>
