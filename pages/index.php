@@ -1,3 +1,4 @@
+<!-- Section de la bannière du blog -->
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1>Mon [ blog ].</h1>
@@ -11,15 +12,24 @@
 	</div>
 </section>
 
-<?php 
+
+<?php
+	// Inclure le fichier des fonctions PHP
+	include_once('inc/inc.functions.php');
+
+	// Appel à une fonction pour récupérer les articles
 	$_articles = getArticlesFromJson();
 
+	// Si des articles sont trouvés
 	if($_articles && count($_articles)){
 		$compteur = 1;
+
+		// On répète cette opération autant de fois qu'il y a d'articles
 		foreach($_articles as $article){
 			$classCss = ($compteur % 2 == 0 ? 'left' : 'right');
-			##$compteur++;
+			$compteur++;
 			?>
+				<!-- Section d'affichage de l'article -->
 				<section class="spotlight style1 orient-<?php echo $classCss;?>  content-align-left image-position-center onscroll-image-fade-in" id="first">
 					<div class="content">
 						<h2><?php echo $article['titre'];?></h2>
@@ -29,7 +39,7 @@
 						</ul>
 					</div>
 					<div class="image">
-						<img src="<?php echo $art_icle['image'];?>" alt="" />
+						<img src="<?php echo $article['image'];?>" alt="" />
 					</div>
 				</section>
 
