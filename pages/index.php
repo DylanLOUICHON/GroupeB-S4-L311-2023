@@ -39,7 +39,7 @@
 						</ul>
 					</div>
 					<div class="image">
-						<img src="<?php echo $article['image'];?>" alt="" />
+						<img src="<?php echo $article['image'];?>" alt="Image de l'article" />
 					</div>
 				</section>
 
