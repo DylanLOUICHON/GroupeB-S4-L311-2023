@@ -5,11 +5,12 @@
 	$article = getArticleById(
 		array_key_exists('id', $_GET) ? $_GET['id'] : null
 	);
-
+        // s'il n'existe pas d'article, renvoie à la page index
 	if (is_null($article) OR !count($article)) {
 		header('Location:index.php');
 	}
-?>	
+?>
+// Contenu de la page affichant le contenu de l'article consulté
 <section class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
 	<div class="content">
 		<h1><?php echo $article['titre'];?></h1>
