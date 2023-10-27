@@ -1,4 +1,4 @@
-<!-- Scripts -->
+<!-- Liaisons JavaScript -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
